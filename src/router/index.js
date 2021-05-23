@@ -5,11 +5,12 @@ const Home=()=>import('../views/home/Home')
 const Category=()=>import('../views/category/Category')
 const Cart=()=>import('../views/cart/Cart')
 const Profile=()=>import('../views/profile/Profile')
+
 // 安装插件
 Vue.use(VueRouter)
-// 创建router
-const routers = [
-  {
+
+// 创建路由插件
+const routes = [{
   path: '',
   redirect: '/home'
 },
@@ -28,8 +29,8 @@ const routers = [
     component:Profile
   },
 ]
-const router=new VueRouter({
-  routes,
-  mode:'history'
+const router = new VueRouter({
+  routes
 })
+// 导出router
 export default router
